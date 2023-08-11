@@ -1,4 +1,4 @@
-# PL-kNN
+# PL-kNN (Performance with different Angle Thresholds)
 
 This repository contains a modified version of the source code of PL-kNN, a model proposed to bypass the choice of the k parameter of the standard k-NN classifier. Our code compares the
 accuracy for different angle thresholds which also plays a part in how the model performs.
