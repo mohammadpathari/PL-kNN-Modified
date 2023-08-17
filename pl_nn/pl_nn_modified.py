@@ -23,7 +23,7 @@ X,y = make_classification(n_samples=50,
 '''
 
 
-class PlNearestNeighborsTest:
+class PlNearestNeighborsModified:
     def __init__(self, angle_threshold=60):
         self.X_train = None
         self.y_train = None
