@@ -7,7 +7,7 @@ Created on Sun May 16 19:33:52 2021
 
 import numpy as np
 from pl_nn.pl_nn_original import PlNearestNeighbors
-from pl_nn.pl_nn_modified import PlNearestNeighborsTest
+from pl_nn.pl_nn_modified import PlNearestNeighborsModified
 
 
 def calculate_accuracy(y_true, y_pred):
@@ -24,10 +24,11 @@ y = data[:, 0].astype(int)
 ###############################################################################
 # Split the data into train (80%) and test (20%)
 random_list = list(range(X.shape[0]))
+np.random.seed(5)  # Using a fixed seed value to make the test reproducible
 np.random.shuffle(random_list)
 
-train_idx = random_list[0:round(len(random_list) * 0.8)]
-test_idx = random_list[0:round(len(random_list) * 0.2)]
+train_idx = random_list[0:round(len(random_list) * 0.75)]
+test_idx = random_list[0:round(len(random_list) * 0.25)]
 
 X_train, y_train = X[train_idx, :], y[train_idx]
 X_test, y_test = X[test_idx, :], y[test_idx]
@@ -41,11 +42,13 @@ X_test_sc = (X_test - np.mean(X_test, axis=0)) / np.std(X_test, axis=0)
 
 angle_thresholds = [30, 45, 60, 75, 105, 120, 135, 150]
 
+print('')
+
 for angle in angle_thresholds:
     ###############################################################################
     # Training
     plnn = PlNearestNeighbors()
-    plnn_test = PlNearestNeighborsTest(
+    plnn_test = PlNearestNeighborsModified(
         angle_threshold=angle  # Setting different angle thresholds
     )
 
@@ -63,6 +66,6 @@ for angle in angle_thresholds:
     # Computing accuracies
     y_test = y_test.reshape(-1, 1)
     print(f'Angle -> 90 | Accuracy PL-NN: {calculate_accuracy(y_test, y_pred)}')
-    print(f'Angle -> {angle} | Accuracy PL-NN-Test: {calculate_accuracy(y_test, y_pred_test)}')
+    print(f'Angle -> {angle} | Accuracy PL-NN-Modified: {calculate_accuracy(y_test, y_pred_test)}')
     print('')
     ###############################################################################
