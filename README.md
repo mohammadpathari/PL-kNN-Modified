@@ -7,9 +7,25 @@ The original PL-kNN model is based on the Smallest Modified k-Nearest Neighbors 
 
 **Ayyad, S. M., Saleh, A. I., & Labib, L. M. (2019). Gene expression cancer classification using modified K-Nearest Neighbors technique. *Biosystems*, 176, 41-51.**
 
+# Our Results
+
+We conducted this test over different seed level and different split ratios for our training and testing data. In our results' folder we have included the accuracy levels we obtained
+for different angle thresholds over Train-Test split ratios of 80:20 & 75:25. The original PL-kNN code used a randomizer to shuffle the data for each iteration. However, we used the
+seed function to reproduce our exact results. Here is one example of our analysis:
+
+**For a Train-Test Split of 80:20 {seed value 5}**
+
+![Screenshot](https://raw.githubusercontent.com/Christo77793/PL-kNN-Modified/main/Results/Dataset%20Split%2080-20/Seed%205.png)
+
+The original model used a fixed value of 90 for their angle threshold. However, the above image demonstrates that depending on the angle threshold selected we can obtained lower and
+higher accuracy results. In the above image we have compared the original angle threshold with various different angle thresholds to see how the original choice compares with other
+angles.
+
 # Usage
 
-The proposed model was aimed to be easy to implement and so to use it just clone the code and run it. The specific seed values we used to obtain our results are:
+The proposed model was aimed to be easy to implement and so to use it just clone the code and run it.
+
+To reproduce our results the specific seed values to be used are:
 
 * Train-Test Split 75:25 Seed 5 & 13
 * Train-Test Split 80:20 Seed 5 & 9
