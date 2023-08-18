@@ -3,7 +3,7 @@
 This repository contains a modified version of the source code of PL-kNN, which is a model proposed to bypass the choice of the k parameter of the standard k-NN classifier. Our modified
 code compares the accuracy for <u>different angle thresholds</u> which we've discovered plays a part in how the model performs.
 
-The original PL-kNN model is based on the Smallest Modified k-Nearest Neighbors (SMKNN) presented by Ayyad et al. in the following paper:
+The original PL-kNN model (found [here](https://github.com/SoftwareImpacts/SIMPAC-2022-275)) is based on the Smallest Modified k-Nearest Neighbors (SMKNN) presented by Ayyad et al. in the following paper:
 
 **Ayyad, S. M., Saleh, A. I., & Labib, L. M. (2019). Gene expression cancer classification using modified K-Nearest Neighbors technique. *Biosystems*, 176, 41-51.**
 
