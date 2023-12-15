@@ -40,5 +40,4 @@ Systems, Signals and Image Processing*, Sofia, Bulgaria. [http://iwssip.bg](http
 
 | Name                     | E-mail                            |
 | ----------------------   | ----------------------            |
-| Christopher Jacob Samuel | 200504859@student.georgianc.on.ca | 
-| Yu-Ju Trista Wang        | 200458314@student.georgianc.on.ca |
+| Mohammad Pathari         | 200551416@student.georgianc.on.ca | 
